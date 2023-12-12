@@ -373,5 +373,28 @@ const bills = [
   },
 ];
 
-// Start coding here
-const totalMembers;
+// function uniqueMember(array, callback) {
+//   const totalMembers = array
+//     .filter(item => item.member !== null)
+//     .map(item => item.member.name);
+
+//   callback(totalMembers);
+// }
+
+// function displayResult(totalMembers) {
+//   console.log(`Unique Members Count: ${new Set(totalMembers).size}`);
+// }
+
+// uniqueMember(bills, displayResult);
+
+function uniqueMember (array) {
+  const totalMembers = array
+  .filter((item) => {
+    return item.member !== null
+  })
+  .map((item) => {
+    return item.member.name
+  })
+  return totalMembers
+}
+console.log(`Unique Members Count: ${new Set(uniqueMember(bills)).size}`);
