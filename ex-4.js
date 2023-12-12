@@ -373,5 +373,20 @@ const bills = [
   },
 ];
 
-// Start coding here
-const totalMembers;
+function NotNullBills(bills) {
+  return bills.member !== null;
+}
+const billsWithOutNull = bills.filter(NotNullBills);
+
+const uniqueMemberNames = [];
+const filteredBills = [];
+
+for (let i = 0; i < billsWithOutNull.length; i++) {
+  const currentMemberName = billsWithOutNull[i].member.name;
+
+  if (!uniqueMemberNames.includes(currentMemberName)) {
+    uniqueMemberNames.push(currentMemberName);
+    filteredBills.push(billsWithOutNull[i]);
+  }
+}
+console.log(`"Unique Members Count: ${filteredBills.length}"`);

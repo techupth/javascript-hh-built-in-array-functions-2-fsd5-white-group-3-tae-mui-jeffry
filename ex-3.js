@@ -374,4 +374,10 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+function checkNullMembers(bills) {
+  return bills.member != null;
+}
+const newBills = bills.filter(checkNullMembers);
+
+const memberNames = newBills.map(newBills => newBills.member.name); //เป็นฟังชันที่ return แต่ name ออกมา แล้วสร้าง array ขึ้นไปเก็บไว้ในตัวแปร memberNames
+console.log(memberNames);
