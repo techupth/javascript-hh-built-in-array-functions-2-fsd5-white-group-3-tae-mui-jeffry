@@ -373,6 +373,21 @@ const bills = [
     },
 ];
 
-// Start coding here
 
-const totalPaidByLocation;
+const location = [];
+
+    for(let i = 0; i < bills.length; i++) {
+        const currentLocationName = bills[i].location;
+
+        if (!location.includes(currentLocationName))
+            location.push(currentLocationName);
+        if
+    }
+
+function sumBills(accumulator, bills) {
+    return accumulator + bills.total;
+}
+    const result = bills.reduce(sumBills, 0);
+    console.log(`Total bill transaction is ${result}`); 
+
+//เดียวกลับมาทำ
