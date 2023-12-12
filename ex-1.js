@@ -373,4 +373,10 @@ const bills = [
   },
 ];
 
-// Start coding here
+function totalBillsCount (array) {
+  let totalAmount = array.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue.total
+  }, 0)
+  return totalAmount
+}
+console.log(totalBillsCount(bills))
